@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         div{ overflow: hidden;margin: 50px auto;padding: 166px;}
+     div button:first-of-type{float: left;}
+    div button:last-of-type{float: right;}
+    button{background-color: rgb(238, 238, 238); color: #020805; border: 2px solid #020805;
+    font-size: 20px; font-weight: bold; width: 50px; cursor: pointer;padding: 10px;margin-top: 240px;}
+    </style>
+    <script>
+        var i = 0,images = ["../images/Winter-season.jpg",
+                           "../images/summer.jpg",
+                            "../images/spring.jpg",
+                            "../images/antum.jpg",
+                             "../images/rainy.jpg" ];
+                            
+      function mySlide(param)
+      {
+          if(param === 'next')
+          {
+              i++;
+              if(i === images.length){ i = images.length - 1; }
+          }else{
+              i--;
+              if(i < 0){ i = 0; }
+          }
+          
+          document.getElementById('slide').src = images[i];
+      }
+</script>
+</head>
+<body>
+    <div>
+        <img src="../images/Winter-season.jpg" id="slide" alt="" width="900" height="550">
+        <button onclick="mySlide('prev');"><</button>
+        <button onclick="mySlide('next');">></button>
+    </div>
+</body>
+</html>

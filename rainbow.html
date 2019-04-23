@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"> Rainbow consist of seven colors</p>
+    <!--<button onclick="RainbowColors();">Rainbow </button>-->
+    
+    <script>
+    var colors = ["#FF0900", "#FF7F00", "#FFEF00", " #00F11D", "#0079FF", "#A800FF"];
+    
+     setInterval( RainbowColors,1000);
+     var i = 0;
+    function RainbowColors(){
+     var a =  document.getElementById("para")
+     a.style.color= colors[i];
+     if(i<(colors.length-1)){
+         i++; }
+     else{
+    i=0;}
+    
+
+    }
+    
+</script>
+    
+</body>
+</html>
