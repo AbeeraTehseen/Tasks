@@ -9,21 +9,23 @@
 <body>
     <script>
 
-    function Sta(){
-        this.data = [];
+    var Sta =function(){
+        this.data = {};
+        this.size = 0;
         }
        Sta.prototype.add= function (element){
-           this.data.push(element);
+           this.data[this.size]=element;
+           this.size++;
        }
       Sta.prototype.remove = function(){
-       return this.data.pop();
+          this.size && this.size --
+          var result = this.data[this.size];
+          delete this.data[this.size]
+          return result;
        }
-       var a = new Sta();
-       a.add(1);
-       a.add(3);
-       console.log(a);
-       a.remove();
-       console.log(a);  
+       Sta.prototype.itsSize = function(){
+           return this.size;
+       }
 
     </script>
 </body>
